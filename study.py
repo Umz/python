@@ -1,3 +1,5 @@
+#   File for testing bits of code etc.
+
 import random, os
 
 clear = lambda: os.system('cls')
