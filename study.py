@@ -1,8 +1,12 @@
-#   File for testing bits of code etc.
+#   study.py File for testing bits of code etc.
 
 import random, os
 
 clear = lambda: os.system('cls')
+
+l1 = [1,2,3,4,5,6,7]
+a1 = l1[-10:]
+print (a1)
 
 list = [1, 2, 3]
 one, two, three = list
