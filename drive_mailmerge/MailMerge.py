@@ -2,6 +2,9 @@
 #   MailMerge.py -  USING Python to merge Google Doc with Google Sheet
 #   There is no native way to do this for some reason?
 
+#   SAMPLE code fails (credentials - downloaded file has no valid type)
+#   BUILD own version using the Docs sample instead.
+
 from __future__ import print_function
 
 import time
@@ -12,6 +15,9 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 #   DOCUMENT template ID and Data Sources (Docs and Sheets)
+
+DOC_ID = "1UhCwvgGbNpQpZB_4rjdhHawX0tjgSRiYDGHCX4V0Mmo"
+SHEET_ID = "1cfbsag1WGsJlnv29sqWEUkEvk8Qz8tkQx4B-wz8w9fo"
 
 #   AUTH CONSTANTS
 
@@ -33,7 +39,6 @@ TEXT_SOURCE = (
 )
 
 creds, _ = google.auth.default()
-# pylint =
 
 #   SERVICE endpoints to Google APIs
 
@@ -113,9 +118,9 @@ if __name__ == '__main__':
 
     merge = {
         #   RECIPIENT data (supplied by SOURCE)
-        'ref': None,
-        'name': None,
-        'address': None
+        'ID': None,
+        'Name': None,
+        'Address': None
     }
 
     data = get_data(SOURCE)     #   GET data from source
