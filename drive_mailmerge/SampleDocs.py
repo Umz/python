@@ -47,6 +47,5 @@ def main():
     except HttpError as err:
         print(err)
 
-
 if __name__ == '__main__':
     main()
